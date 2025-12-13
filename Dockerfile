@@ -2,10 +2,7 @@ FROM ubuntu:latest
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget curl 
-RUN echo "deb https://ngrok-agent.s3.amazonaws.com bookworm main" \
-  | sudo tee /etc/apt/sources.list.d/ngrok.list
-RUN sudo apt update
-RUN sudo apt install ngrok
+FROM ngrok/ngrok
 RUN ngrok config add-authtoken 36mEaN170pNDocM0NO28JkeJJqp_2w7jzkXSKwQvn7pFZBsJ4
 RUN ngrok tcp 25565
 
