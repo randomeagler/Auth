@@ -3,7 +3,7 @@ const ScriptServer = require('scriptserver');
 const server = new ScriptServer({
   core: {
     jar: 'paper.jar', // Name of your server JAR file
-    args: ['-Xmx2G', '-Xms1G'], // Arguments for RAM usage
+    args: ['-Xmx500M', '-Xms500M'], // Arguments for RAM usage
     rcon: {
       port: '25565',
       password: 'root'
