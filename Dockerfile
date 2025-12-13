@@ -4,8 +4,7 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget curl
 RUN apt-get install sudo
 FROM ngrok/ngrok
-RUN sudo ngrok config add-authtoken 36mEaN170pNDocM0NO28JkeJJqp_2w7jzkXSKwQvn7pFZBsJ4
-RUN sudo ngrok tcp 25565
+RUN ngrok tcp 25565
 
 
 # Set working directory
