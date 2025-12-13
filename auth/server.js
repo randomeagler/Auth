@@ -5,7 +5,7 @@ const server = new ScriptServer({
     jar: 'paper.jar', // Name of your server JAR file
     args: ['-Xmx500M', '-Xms500M'], // Arguments for RAM usage
     rcon: {
-      port: '25565',
+      port: '25575',
       password: 'root'
     }
   }
