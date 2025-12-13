@@ -22,6 +22,8 @@ RUN chmod +x /app/auth
 # Expose the BungeeCord port
 EXPOSE 25565
 RUN java -Xms128M -Xmx510M -jar /app/auth/paper.jar
+# Sleep to ensure zrok runs correctly
+RUN sleep 3m
 
 # Run the startup script
 CMD ["./main.sh"]
