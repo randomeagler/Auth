@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget curl
 RUN apt-get install gnupg -y
 RUN curl -sSLf https://get.openziti.io/install.bash | bash -s zrok
 RUN apt install zrok-agent
+RUN zrok config set apiEndpoint https://api.zrok.io
 RUN zrok enable Ftp2rbg2vota
 RUN zrok reserve private 0.0.0.0:25565 --backend-mode tcpTunnel --unique-name auth
 
