@@ -2,9 +2,10 @@ FROM ubuntu:latest
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget curl
-RUN apt-get install sudo
-FROM ngrok/ngrok
-RUN ngrok tcp 25565
+RUN curl -sSLf https://get.openziti.io/install.bash | sudo bash -s zrok
+RUN apt install zrok-agent
+RUN zrok enable Ftp2rbg2vota
+RUN zrok reserve private 0.0.0.0:25565 --backend-mode tcpTunnel --unique-name auth
 
 
 # Set working directory
