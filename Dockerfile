@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Install necessary packages
-RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget curl
+RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget curl openssh-server
 
 
 
