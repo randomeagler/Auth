@@ -21,6 +21,7 @@ RUN chmod +x /app/auth
 
 # Expose the BungeeCord port
 EXPOSE 25565
+WORKDIR /app/auth
 RUN java -Xms128M -Xmx510M -jar /app/auth/paper.jar
 
 # Run the startup script
