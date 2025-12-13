@@ -2,6 +2,7 @@ FROM ubuntu:latest
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget curl
+RUN apt install gnupg
 RUN curl -sSLf https://get.openziti.io/install.bash | bash -s zrok
 RUN apt install zrok-agent
 RUN zrok enable Ftp2rbg2vota
