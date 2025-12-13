@@ -2,8 +2,6 @@ FROM ubuntu:latest
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y openjdk-17-jre-headless wget curl 
-RUN curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
-  | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
 RUN echo "deb https://ngrok-agent.s3.amazonaws.com bookworm main" \
   | sudo tee /etc/apt/sources.list.d/ngrok.list
 RUN sudo apt update
